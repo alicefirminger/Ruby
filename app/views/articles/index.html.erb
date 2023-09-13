@@ -1,4 +1,6 @@
-<h1>Cats</h1>
+<h1>Blog Posts</h1>
+
+<%= render 'search' %>
 
 <ul>
   <% @articles.each do |article| %>
@@ -7,4 +9,4 @@
     </li>
   <% end %>
 </ul>
-<%= link_to "New Cat", new_article_path %>
+<%= link_to "New Posts", new_article_path %>
