@@ -31,6 +31,7 @@ gem 'bootstrap', '~> 5.3.1'
 
 gem 'ransack'
 
+gem 'pry'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

@@ -1,14 +1,14 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!
-  def index
-    @articles = Article.all
-  end
-
+  include Ransack::Helpers::FormHelper
+ 
   def index
     @q = Article.ransack(params[:q])
+    Rails.logger.debug @q.result.to_sql # Add this line for debugging
     @articles = @q.result(distinct: true)
   end
   
+
   def show
     @article = Article.find(params[:id])
   end

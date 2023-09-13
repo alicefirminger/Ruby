@@ -1,6 +1,5 @@
-<%= search_form_for @q do |f| %>
-    <%= f.label :title_cont, "Search by Title" %>
-    <%= f.search_field :title_cont %>
-    <%= f.submit "Search" %>
-  <% end %>
-  
+<%= search_form_for @q, url: articles_path, method: :get, as: :q do |f| %>
+  <%= f.label :title_cont, "Search by Title" %>
+  <%= f.search_field :title_cont %>
+  <%= f.submit "Search" %>
+<% end %>
