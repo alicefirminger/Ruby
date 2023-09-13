@@ -6,3 +6,27 @@ body {
     place-items: center;
     margin: 80px;
 }
+
+.list-group {
+    margin: 2rem;
+    // width: 15vw;
+}
+
+.list-group-item a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    margin-bottom: 2.5rem;
+}
+
+.btn-primary {
+    margin-left: 1rem;
+    width: 10vw;
+}
+
+
+.label {
+    margin-right: 1rem;
+}
