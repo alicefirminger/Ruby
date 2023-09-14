@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a cat blog post app created using Ruby on Rails.
 
-Things you may want to cover:
+Features:
 
-* Ruby version
+- User Authentication: 
+    Ability to sign up and log in to create blog posts. 
+    Authentication was created using the devise gem
 
-* System dependencies
+- CRUD functionality:
+    Users can create, read, update and delete their blog posts
 
-* Configuration
+- Search functionality:
+    Users can search for blog posts by title
+    Search functionality was created using the ransack gem
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Use the command rails server to run the server and then navigate to localhost:3000 to visit the app!

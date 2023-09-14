@@ -1,8 +1,13 @@
-<div class="d-grid col-6 justify-content-center">
-<%= search_form_for @q, url: articles_path, method: :get, as: :q do |f| %>
-  <div class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
-  <div class="label">
-  <%= f.label :title_cont, "Search by Title" %> </div>
-  <%= f.search_field :title_cont, class:"input-field" %>
-  <%= f.submit "Search" , class: "btn btn-primary"%> </div>
-<% end %> </div>
+<div class="d-flex align-items-center">
+  <%= search_form_for @q, url: articles_path, method: :get, as: :q do |f| %>
+    <div class="label">
+      <%= f.label :title_cont, "Search by Title" %>
+    </div>
+    <div class="input-field">
+      <%= f.search_field :title_cont, class: "form-control" %>
+    </div>
+    <div class="search-button">
+      <%= f.submit "Search", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
