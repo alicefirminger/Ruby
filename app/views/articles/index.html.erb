@@ -1,12 +1,13 @@
-<h1>Blog Posts</h1>
+<h1 class="text-center">Blog Posts</h1>
 
 <%= render 'search' %>
-<div class="d-grid gap-2 col-6 mx-auto">
+<div class="d-grid col-5 mx-auto">
 <ul class="list-group">
   <% @articles.each do |article| %>
     <li class="list-group-item list-group-item-action">
       <%= link_to article.title, article %>
     </li>
   <% end %>
-</ul>
+</ul></div>
+<div class="d-grid col-2 mx-auto">
 <%= link_to "New Post", new_article_path, class: "btn btn-success"%> </div>

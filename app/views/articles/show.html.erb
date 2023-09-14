@@ -1,10 +1,10 @@
 <h1><%= @article.title %></h1>
 
-<p><%= @article.body %></p>
+<p class="body-text"><%= @article.body %></p>
 
-<ul>
-  <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li><%= link_to "Delete", article_path(@article), data: {
+<ul class="list-group">
+  <li class="list-group-item list-group-item-action list-group-item-success"><%= link_to "Edit", edit_article_path(@article) %></li>
+  <li class="list-group-item list-group-item-action list-group-item-danger"><%= link_to "Delete", article_path(@article), data: {
                     turbo_method: :delete,
                     turbo_confirm: "Are you sure?"
                   } %></li>

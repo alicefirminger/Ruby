@@ -1,15 +1,27 @@
 @import "bootstrap";
 
-body {
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* Global styles */
+html, body {
     font-size: 18px;
-    display: grid;
-    place-items: center;
-    margin: 80px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
+/* Content styles */
 .list-group {
     margin: 2rem;
-    // width: 15vw;
 }
 
 .list-group-item a {
@@ -18,15 +30,39 @@ body {
 }
 
 h1 {
-    margin-bottom: 2.5rem;
+    margin: 2.5rem 0 2.5rem 0;
 }
-
-.btn-primary {
-    margin-left: 1rem;
-    width: 10vw;
-}
-
 
 .label {
     margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.input-field {
+    width: 18vw;
+    margin-bottom: 0.5rem;
+}
+
+.input-field-large {
+   width: 25vw;
+    margin-bottom: 0.5rem;
+}
+
+.body-text {
+    width: 70vw;
+    text-align: justify;
+    line-height: 2rem;
+}
+
+
+/* Buttons */
+.btn-dark, .btn-primary {
+    margin:1rem 0 1rem 0;
+    width: 18vw;
+}
+
+.btn-outline-primary {
+    margin:1rem 0 2rem 0;
+    width: 25vw;
+    text-wrap: wrap;
 }
