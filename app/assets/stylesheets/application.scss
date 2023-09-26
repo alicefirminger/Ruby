@@ -11,15 +11,25 @@
 html, body {
     font-size: 18px;
 }
-body {
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100%;
+}
+
+/* Content styles */
+
+.auth, .article {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100%; 
+    margin-top: 5rem;
 }
 
-/* Content styles */
 .list-group {
     margin: 2rem;
 }
@@ -28,9 +38,13 @@ body {
     text-decoration: none;
     color: black;
 }
+.list-container {
+    min-width: 50vw;
+}
 
 h1 {
-    margin: 2.5rem 0 2.5rem 0;
+    margin: 2.5rem 1rem;
+    text-align: center;
 }
 
 .label {
@@ -39,7 +53,7 @@ h1 {
 }
 
 .input-field {
-    width: 18vw;
+    min-width: 80vw;
     margin-bottom: 0.5rem;
 }
 
@@ -49,20 +63,20 @@ h1 {
 }
 
 .title-field {
-    width: 40vw;
+    min-width: 80vw;
     margin-bottom: 0.5rem;
     padding-left: 0.5rem;
 }
 
 .body-field {
-    width: 40vw;
-    height: 25vh;
+    min-width: 80vw;
+    height: 40vh;
     margin-bottom: 0.5rem;
     padding: 0.5rem;
 }
 
 .body-text {
-    width: 70vw;
+    width: 80vw;
     text-align: justify;
     line-height: 2rem;
 }
@@ -71,11 +85,58 @@ h1 {
 /* Buttons */
 .btn-dark, .btn-primary {
     margin:1rem 0 1rem 0;
-    width: 18vw;
+    min-width: 80vw;
+}
+
+.btn-success {
+    margin-bottom: 2rem;
+    min-width: 40vw;
 }
 
 .btn-outline-primary {
     margin:1rem 0 2rem 0;
-    width: 25vw;
+    min-width: 25vw;
     text-wrap: wrap;
+}
+
+.nav-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 2rem;
+    min-width: 20vw;
+}
+
+
+@media screen and (min-width: 480px) {
+    .btn-dark, .btn-primary, .btn-success {
+        margin: 1rem 0;
+        width: 30vw;
+        min-width: unset;
+    }
+
+    .input-field {
+        width: 30vw; 
+        margin-bottom: 0.5rem;
+        min-width: unset;
+    }
+
+    .body-text {
+        width: 50vw;
+    }
+
+    .title-field {
+        width: 30vw;
+        min-width: unset;
+    }
+    
+    .body-field {
+        width: 30vw;
+        min-width: unset;
+    }
+
+    .list-container {
+        width: 40vw;
+        min-width: unset;
+    }
 }

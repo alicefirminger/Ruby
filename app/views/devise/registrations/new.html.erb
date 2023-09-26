@@ -1,3 +1,4 @@
+<div class="auth">
 <h2>Sign up</h2>
 <div class="form-group">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -27,4 +28,5 @@
 <% end %> 
 </div>
 </div>
-<%= render "devise/shared/links" %>
+<%= render "devise/shared/links", class: "login-route"%>
+</div>
