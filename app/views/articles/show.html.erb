@@ -5,10 +5,14 @@
 <p class="body-text"><%= @article.body %></p>
 
 <ul class="list-group">
-  <li class="list-group-item list-group-item-action list-group-item-success"><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li class="list-group-item list-group-item-action list-group-item-danger"><%= link_to "Delete", article_path(@article), data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
-                  } %></li>
+  <% if current_user == @article.user %>
+  <li class="list-group-item list-group-item-action list-group-item-success">
+  <%= link_to "Edit", edit_article_path(@article) %>
+  <% end %></li>
+  <% if current_user == @article.user %>
+  <li class="list-group-item list-group-item-action list-group-item-danger">
+  <%= link_to "Delete", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
+<% end %>
+</li>
 </ul>
 </div>
