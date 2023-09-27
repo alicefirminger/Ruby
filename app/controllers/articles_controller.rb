@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
  
   def index
     @q = Article.ransack(params[:q])
-    Rails.logger.debug @q.result.to_sql # Add this line for debugging
+    Rails.logger.debug @q.result.to_sql
     @articles = @q.result(distinct: true)
   end
   
@@ -47,11 +47,17 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article = Article.find(params[:id])
+    puts "current_user: #{current_user.id}"
+    puts "@article.user: #{@article.user.id}"
+    
     if current_user == @article.user
-    @article.destroy
-    redirect_to root_path, status: :see_other
+      @article.destroy
+      redirect_to root_path, status: :see_other
+    else
+      puts 'You cannot delete this.'
     end
   end
+  
 
   private
     def article_params
